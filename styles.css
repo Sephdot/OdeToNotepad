@@ -37,12 +37,20 @@ input, button, textarea, select {
 
 header {
 	display: flex;
+	flex-flow: row nowrap;
 	justify-content: space-around;
 	align-items: center;
 }
 
+@media (max-width: 800px) {
+	header {
+		flex-direction: column;
+	}
+}
+
 footer {
 	display: flex;
+	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
