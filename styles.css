@@ -1,13 +1,35 @@
-:root, :root[data-theme="light"] {
-	--text-color: #000000;
-	--bkg-color: #f9f9f9;
-	--anch-color: #f9a653;
+@font-face {
+	font-family: 'Segoe UI';
+	src: 
+		local("Segoe UI"),
+		url("./resources/fonts/segoeuithis.ttf") format("truetype");
 }
 
-:root[data-theme="dark"] {
+@font-face {
+	font-family: 'Lucida Console';
+	src:
+		local("Lucida Console"),
+		url("./resources/fonts/lucon.ttf") format("truetype");
+}
+
+:root, :root[theme="light"] {
+	--text-color: #000000;
+	--bkg-color: #f9f9f9;
+	--head-foot-bkg-color: #f4f4f4;
+	--head-foot-border-color: #e7e7e7;
+	--footer-text-color: #5e5e5e;
+	--anch-color: #f9a653;
+	background-color: var(--bkg-color);
+}
+
+:root[theme="dark"] {
 	--text-color: #ffffff;
 	--bkg-color: #272727;
+	--head-foot-bkg-color: #1f1f1f;
+	--head-foot-border-color: #1c1c1c;
+	--footer-text-color: #cccccc;
 	--anch-color: #dbffff;
+	background-color: var(--bkg-color);
 }
 
 
@@ -21,9 +43,7 @@
 
 * {
 	line-height: calc(1em + 0.5rem);
-	background-color: var(--bkg-color);
 	color: var(--text-color);
-	font-family: monospace, sans-serif;
 }
 
 a {
@@ -38,6 +58,11 @@ p {
 	text-wrap: pretty;
 }
 
+section p {
+	margin: 0 auto 1rem;
+	max-width: 70ch;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	text-wrap: balance;
 }
@@ -47,6 +72,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+}
+
+main {
+	padding: 0.75rem;
 }
 
 img, picture, video, canvas, svg {
@@ -59,6 +88,14 @@ input, button, textarea, select {
 }
 
 header {
+
+	font-family: 'Segoe UI', sans-serif;
+	min-width: 100%;
+	align-self: flex-start;
+	padding: 0.65em 0;
+	font-size: 0.9rem;
+	border-bottom: 0.125rem solid var(--head-foot-border-color);
+	background-color: var(--head-foot-bkg-color);
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
@@ -73,6 +110,25 @@ header {
 }
 
 footer {
+	font-family: 'Segoe UI', sans-serif;
+	min-width: 100%;
 	align-self: flex-end;
+	padding: 0.65em 0;
+	font-size: 0.9rem;
+	border-top: 0.125rem solid var(--head-foot-border-color);
+	background-color: var(--head-foot-bkg-color);
 	margin: auto auto 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+}
+
+footer p, footer p i {
+	color: var(--footer-text-color);
+}
+
+section {
+	font-family: 'Lucida Console', monospace;
 }
