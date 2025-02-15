@@ -5,11 +5,9 @@ btn.addEventListener("click", (e) => {
 	if (root.getAttribute('theme') !== "dark")
 	{
 		root.setAttribute("theme", "dark");
-		console.log("To dark mode!");
 	}
 	else
 	{
 		root.setAttribute("theme", "light");
-		console.log("To light mode!");
 	}
 });
