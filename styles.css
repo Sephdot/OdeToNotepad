@@ -17,8 +17,9 @@
 	--bkg-color: #f9f9f9;
 	--head-foot-bkg-color: #f4f4f4;
 	--head-foot-border-color: #e7e7e7;
+	--on-hover-color: #efefef;
 	--footer-text-color: #5e5e5e;
-	--anch-color: #f9a653;
+	--anch-color: #dc8a3b;
 	background-color: var(--bkg-color);
 }
 
@@ -27,8 +28,9 @@
 	--bkg-color: #272727;
 	--head-foot-bkg-color: #1f1f1f;
 	--head-foot-border-color: #1c1c1c;
+	--on-hover-color: #2c2c2c;
 	--footer-text-color: #cccccc;
-	--anch-color: #dbffff;
+	--anch-color: #86d8fb;
 	background-color: var(--bkg-color);
 }
 
@@ -69,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
 	-webkit-font-smoothing: antialiased; /* only affects MacOS users */
+	-webkit-background-clip: padding-box;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -91,7 +94,6 @@ header {
 	font-family: 'Segoe UI', sans-serif;
 	min-width: 100%;
 	align-self: flex-start;
-	padding: 0.18em 0;
 	font-size: 0.8rem;
 	border-bottom: 0.0625rem solid var(--head-foot-border-color);
 	background-color: var(--head-foot-bkg-color);
@@ -101,8 +103,16 @@ header {
 	align-items: center;
 }
 
-header > * {
-	margin: 0 0.75rem;
+.header-item {
+	margin: 0 0.21rem;
+	padding: 0.18rem 0.55rem;
+	background-color: var(--head-foot-bkg-color);
+	border-radius: 0.25rem;
+	border-style: hidden;
+}
+
+.header-item:hover {
+	background-color: var(--on-hover-color);
 }
 
 footer {
@@ -121,7 +131,7 @@ footer {
 	align-items: center;
 }
 
-footer p, footer p i {
+footer p {
 	color: var(--footer-text-color);
 }
 
