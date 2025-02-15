@@ -105,9 +105,9 @@ header {
 
 .header-item {
 	margin: 0 0.21rem;
-	padding: 0.18rem 0.55rem;
+	padding: 0.2rem 0.55rem;
 	background-color: var(--head-foot-bkg-color);
-	border-radius: 0.25rem;
+	border-radius: 0.33rem;
 	border-style: hidden;
 }
 
