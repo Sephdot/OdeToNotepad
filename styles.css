@@ -107,6 +107,9 @@ header {
 	margin: 0 0.21rem;
 	padding: 0.2rem 0.55rem;
 	background-color: var(--head-foot-bkg-color);
+	color: var(--text-color);
+	cursor: default;
+	text-decoration: none;
 	border-radius: 0.33rem;
 	border-style: hidden;
 }
