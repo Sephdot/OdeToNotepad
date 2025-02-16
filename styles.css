@@ -19,6 +19,7 @@
 	--head-foot-border-color: #e7e7e7;
 	--on-hover-color: #efefef;
 	--footer-text-color: #5e5e5e;
+	--footer-vertical-rule-color: var(--head-foot-border-color);
 	--anch-color: #dc8a3b;
 	background-color: var(--bkg-color);
 }
@@ -30,6 +31,7 @@
 	--head-foot-border-color: #1c1c1c;
 	--on-hover-color: #2c2c2c;
 	--footer-text-color: #cccccc;
+	--footer-vertical-rule-color: #313131;
 	--anch-color: #86d8fb;
 	background-color: var(--bkg-color);
 }
@@ -146,8 +148,7 @@ footer p:first-of-type {
 footer span {
 	width: 0.0625rem;
 	height: 1.2rem;
-	background-color: var(--head-foot-border-color);
-	
+	background-color: var(--footer-vertical-rule-color);
 }
 
 section {
